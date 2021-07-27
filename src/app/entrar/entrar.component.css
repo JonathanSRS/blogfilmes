@@ -1,0 +1,13 @@
+#img-bg{
+    background-image: url(../../assets/img/os-premios-mostram-fundo-com-cortinas-vermelhas-aberta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container-fluid{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.corletra{
+    color: rgba(250, 243, 152);
+}

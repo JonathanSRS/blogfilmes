@@ -1,0 +1,12 @@
+#imgC{
+    background-image: url(../../assets/img/pipoca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.btn{
+    background-color: brown;
+    margin:  0 10px 0 15px;
+
+}
