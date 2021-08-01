@@ -2,8 +2,19 @@
     <a class="navbar-brand">Blog Filmes</a>
     <form class="form-inline">
       <button class="btn  my-2 my-sm-0" type="submit">
-        
-        <a class="font-weight-bold text-dark m-1 text-decoration-none" >Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        <a (click)='sair' class="font-weight-bold text-dark m-1 text-decoration-none" >Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </button>
+        <div class="collapse navbar-collapse" id="conteudo">
+          <ul class="navbar-nav mr auto d-flex align-items-center">
+            <li class="nav-item active">
+              <img src="{{foto}}" alt="Imagem usuario" width="50px" height="50px" 
+              class="img-fluid rounded-circle">
+            </li>
+            <li class="nav-item pl-3">
+              <p class="m-0 font-weight-bold fs-16">{{nome}}</p>
+
+            </li>
+        </ul>
+      </div>
     </form>
   </nav>

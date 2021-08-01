@@ -1,6 +1,6 @@
-<p>inicio works!</p>
 <div class="container-fluid">
-    <div class="row bg-secondary">
+  
+    <div class="row bg-secondary d-flex align-items-center">
         <div class="col-md-6">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6">
@@ -8,9 +8,33 @@
                     
                 </div>
             </div>
+        
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-light mr-2">Nova Postagem</button>
+                    <a class="btn btn-outline-light" href="">Ver Postagem</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="./../../assets/img/Home cinema-amico.png" alt="" width="500px" height="500px">
         </div>
     </div>
+</div>
+<div class="container mb-5 mt-5">
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" 
+          href="#todaspostagens" role="tab" aria-controls="nav-todaspostagens" aria-selected="true">Todas as Postagens</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" 
+          href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Minhas Postagens</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+           href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Postagem</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+      </div>
 </div>
