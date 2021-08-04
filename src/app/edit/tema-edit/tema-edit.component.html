@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <h1 class="text-center text-secondary">{{tema.genero}}</h1>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="genero">Genero</label>
+                <input [(ngModel)]='tema.genero' type="text" class="form-control"
+                 id="genero"> 
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-danger mr-4" routerLink='/tema'> Cancelar</button>
+                <button class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
