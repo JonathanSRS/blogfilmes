@@ -72,7 +72,19 @@
       </div>
       </div>
         <div class="tab-pane fade" id="postagemTema" role="tabpanel" 
-        aria-labelledby="nav-postagemTema-tab">Postagens por tema</div>
+        aria-labelledby="nav-postagemTema-tab">Postagens por tema
+          <!-- Cards -->
+          <div class="card-columns" *ngFor='let tema of listaTema'>
+            <div *ngFor='let item of tema.postagem' class="card" style="width: 18rem;" >
+              <div class="card-body">
+                <h5 class="card-title">{{item.filme}}</h5>
+                <p class="card-text">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</p>
+                <p class="card-subtitle mb-2 text-muted">
+                  by: {{postagem.usuario.nome}}</p>
+              </div>
+            </div>
+        </div>
+      </div>
       </div>
 </div>
 
@@ -98,7 +110,7 @@
           </div>
           <div class="form-group">
             <label for="lanca">Data de Lançamento</label>
-            <input [(ngModel)]='postagem.lanca' type="text" class="form-control" id="lanca">
+            <input [(ngModel)]='postagem.lanca' type="date" class="form-control" id="lanca">
         </div>
           <div class="form-group">
             <label for="texto">Descrição</label>
