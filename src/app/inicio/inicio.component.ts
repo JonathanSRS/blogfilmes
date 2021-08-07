@@ -18,10 +18,10 @@ export class InicioComponent implements OnInit {
   //idUser = environment.id
   user: Usuario = new Usuario()
 
-  tema: Tema = new Tema()
   postagem: Postagem = new Postagem()
   listaPostagem: Postagem[]
 
+  tema: Tema = new Tema()
   listaTema: Tema[]
   idTema: number
 
@@ -62,7 +62,7 @@ export class InicioComponent implements OnInit {
 
    findAllPostagens(){
     this.postagemService.getAllPostagem().subscribe((resp: Postagem[])=>{
-      this.listaPostagem
+      this.listaPostagem = resp
     })
    }
 
