@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
-import { Postagem } from '../model/Postagem';
+import { Postagemf } from '../model/Postagemf';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
@@ -16,10 +16,10 @@ import { TemaService } from '../service/tema.service';
 export class InicioComponent implements OnInit {
   idUser: number = environment.id
   //idUser = environment.id
-  user: Usuario = new Usuario()
+  usuario: Usuario = new Usuario()
 
-  postagem: Postagem = new Postagem()
-  listaPostagem: Postagem[]
+  postagemf: Postagemf = new Postagemf()
+  listaPostagem: Postagemf[]
 
   tema: Tema = new Tema()
   listaTema: Tema[]
@@ -44,7 +44,7 @@ export class InicioComponent implements OnInit {
 
   findByIdUser(){
     this.auth.getByIdUser(this.idUser).subscribe((resp: Usuario)=>{
-      this.user = resp
+      this.usuario = resp
     })
   }
 
@@ -61,22 +61,22 @@ export class InicioComponent implements OnInit {
    }
 
    findAllPostagens(){
-    this.postagemService.getAllPostagem().subscribe((resp: Postagem[])=>{
+    this.postagemService.getAllPostagem().subscribe((resp: Postagemf[])=>{
       this.listaPostagem = resp
     })
    }
 
    publicar(){
      this.tema.id = this.idTema
-     this.postagem.tema = this.tema
+     this.postagemf.tema = this.tema
 
-     this.user.id = this.idUser
-     this.postagem.usuario = this.user
+     this.usuario.id = this.idUser
+     this.postagemf.usuario = this.usuario
 
-     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
-       this.postagem = resp
+     this.postagemService.postPostagem(this.postagemf).subscribe((resp: Postagemf)=>{
+       this.postagemf = resp
        alert('Postagem efetuada com sucesso')
-       this.postagem = new Postagem()
+       this.postagemf = new Postagemf()
        this.findAllPostagens()
      })
    }

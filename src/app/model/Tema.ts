@@ -1,7 +1,7 @@
-import { Postagem } from "./Postagem"
+import { Postagemf } from "./Postagemf"
 
 export class Tema{
     public id: number
     public genero: string
-    public postagem: Postagem[]
+    public postagemf: Postagemf[]
 }
