@@ -14,8 +14,8 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  idUser: number = environment.id
-  //idUser = environment.id
+  //idUser: number = environment.id
+idUser = environment.id
   usuario: Usuario = new Usuario()
 
   postagemf: Postagemf = new Postagemf()
@@ -72,9 +72,9 @@ export class InicioComponent implements OnInit {
 
      this.usuario.id = this.idUser
      this.postagemf.usuario = this.usuario
-
-     this.postagemService.postPostagem(this.postagemf).subscribe((resp: Postagemf)=>{
+     this.postagemService.postPostagem(this.postagemf).subscribe((resp: Postagemf) => {
        this.postagemf = resp
+       console.log(this.postagemf)
        alert('Postagem efetuada com sucesso')
        this.postagemf = new Postagemf()
        this.findAllPostagens()
